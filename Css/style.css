@@ -1,0 +1,42 @@
+body {
+  background-color: #f8f9f7;
+  background-image: url(../background_toum.png);
+  background-size:auto;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  height: 100vh;
+}
+.content {
+  text-align: center; /* 将文本居中显示 */
+  font-family: myfont;
+  font-size: 40px;
+  color: rgb(238, 148, 13);
+}
+@font-face {
+  font-family: myfont;
+  src: url('Sansation_Light.ttf'),url('Sansation_Light.eot');
+}
+.container {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 30px;
+  margin-left: 200px;
+  margin-right: 100px;
+}
+.box {
+    background-color: rgb(249, 253, 253);
+    height: 300px;
+    width: 600px;
+    border: 2px solid coral;
+    border-radius: 10px;
+  }
+#submitBtn{
+  margin-left: 10px;
+}
+#option{
+  display:block;
+  margin:5px;
+}
+#question{
+  margin-left: 20px;
+}

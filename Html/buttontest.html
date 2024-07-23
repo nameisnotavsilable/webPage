@@ -1,0 +1,58 @@
+<!DOCTYPE html>  
+<html lang="en">  
+
+<head>  
+    <meta charset="UTF-8">  
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">  
+    <title>答题页面</title>  
+    <style>  
+        .option {  
+            display: block;  
+            margin-bottom: 10px;  
+        }  
+    </style>  
+</head>  
+
+<body>  
+    <h1>请回答以下问题：</h1>  
+    <p>题目：这是一个测试题目？</p>  
+    <label class="option">  
+        <input type="radio" name="answer" value="A"> A. 选项A  
+    </label>  
+    <label class="option">  
+        <input type="radio" name="answer" value="B"> B. 选项B  
+    </label>  
+    <label class="option">  
+        <input type="radio" name="answer" value="C"> C. 选项C  
+    </label>  
+    <button id="submitBtn">提交答案</button>  
+    <p id="feedback"></p>  
+
+    <script>  
+        // 正确答案  
+        const correctAnswer = 'A';  
+
+        // 提交答案的按钮  
+        const submitBtn = document.getElementById('submitBtn');  
+
+        // 反馈信息显示的元素  
+        const feedback = document.getElementById('feedback');  
+
+        // 当点击提交答案按钮时的逻辑  
+        submitBtn.addEventListener('click', function() {  
+            const selectedAnswer = document.querySelector('input[name="answer"]:checked');  
+
+            if (!selectedAnswer) {  
+                feedback.textContent = '请选择一个答案后再提交';  
+            } else {  
+                if (selectedAnswer.value === correctAnswer) {  
+                    feedback.textContent = '答对了！';  
+                } else {  
+                    feedback.textContent = '答错了！';  
+                }  
+            }  
+        });  
+    </script>  
+</body>  
+
+</html>
